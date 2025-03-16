@@ -11,65 +11,143 @@ body {
 }
 
 main {
-    padding-top: 150px;
+    padding-top: 80px;
 }
 
 header {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     position: fixed;
     z-index: 1000;
     width: 100%;
-    height: 160px;
+    height: 80px;
     background-color: #10395c;
+    padding: 0 20px;
 }
 
 header img {
     position: absolute;
     left: 20px;
-    height: 105px;
-}
-
-.header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-    text-align: center;
+    height: 67px;
 }
 
 header h1 {
     color: #e4d1c8;
-    font-size: 90px;
+    align-items: center;
+    font-size: 50px;
     font-weight: bold;
     font-family: 'Parisienne', cursive;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    flex: 1;
-    text-align: center;
+    margin: 0;
+    padding-left: 90px;
 }
 
 
 nav {
-    margin-top: -15px;
-    z-index: 1001;
+    display: flex;
+    gap: 15px;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
-    gap: 13px;
+    padding: 0;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
+    position: relative;
 }
 
 nav a {
+    color: #e4d1c8;
     text-decoration: none;
-    display: inline-block;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 450;
+    font-family: 'Poppins', serif;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #10395c;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #10395c;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 5px;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    width: auto;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+nav ul li:hover>ul {
+    display: block;
+    left: auto;
+    right: 0;
+}
+
+nav ul li ul li {
+    display: block;
+    margin: 20px;
+}
+
+.menu-toggle {
+    display: none;
+    background-color: #10395c;
+    color: #fff;
+    font-size: 30px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background-color: #10395c;
+        z-index: 1001;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav a {
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav.active {
+        display: flex;
+    }
 }
 
 .hero {
@@ -219,17 +297,18 @@ form textarea:focus {
     font-weight: 350;
     color: #10395c;
     margin-bottom: 40px;
-    display: flex;               
-    align-items: center;         
-    justify-content: center;     
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
 }
+
 .products h2 i {
-    font-size: 1em;           
-    color: #10395c;  
+    font-size: 1em;
+    color: #10395c;
     position: absolute;
     right: 0;
-    margin-left: 10px;          
+    margin-left: 10px;
 }
 
 .products h2 i:hover {
@@ -316,9 +395,9 @@ footer {
 
 .prettybutton {
     background: #e4d1c800;
-    color: black;
-    padding: 5px 20px;
-    font-size: 23px;
+    color: #e4d1c8;
+    padding: 5px 10px;
+    font-size: 18px;
     font-family: 'Poppins', serif;
     font-weight: 450;
     border: none;
@@ -326,13 +405,14 @@ footer {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     outline: none;
+    font-weight: 500;
     display: inline-block;
     margin-top: 1px;
 }
 
 .prettybutton:hover {
-    transform: scale(1.15);
-    color: white;
+    transform: scale(1.35);
+    color: e4d1c8;
 }
 
 .prettybutton:active {
