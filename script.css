@@ -27,7 +27,7 @@ header {
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
     width: 100%;
     margin-bottom: 10px;
     flex-wrap: wrap;
@@ -108,7 +108,7 @@ nav a {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-weight: 570;
     position: relative;
- 
+
 }
 
 .hero h2 {
@@ -161,17 +161,17 @@ nav a {
 
 .heroo-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 20px; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     width: 100%;
     height: 100%;
     padding: 0 15px;
 }
 
 .retangulo {
-    background-color: #10395c; 
-    height: 100%; 
-    border-radius: 8px; 
+    background-color: #10395c;
+    height: 100%;
+    border-radius: 8px;
 }
 
 .heroo img {
@@ -188,7 +188,7 @@ nav a {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-weight: 570;
     position: relative;
- 
+
 }
 
 .heroo h2 {
@@ -512,33 +512,51 @@ footer {
 
 @media (max-width: 768px) {
     .heroo-content {
-      grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-  }
-  
+
+    nav {
+        font-size: 14px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav h1 {
+        font-size: 16px;
+    }
+
+    nav img {
+        width: 50px;
+    }
+
+    nav a {
+        padding: 5px 10px;
+    }
+}
+
 @media (max-width: 480px) {
     .heroo-content {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
-  }
+}
 
 @media (max-width: 600px) {
     nav ul {
-      flex-direction: column;
-      gap: 10px;
+        flex-direction: column;
+        gap: 10px;
     }
-  
+
     .header-content {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
     }
-  
+
     .normalbutton {
-      font-size: 30px;
+        font-size: 30px;
     }
-  
+
     .prettybutton {
-      font-size: 14px;
+        font-size: 14px;
     }
 }
